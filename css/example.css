@@ -1,0 +1,20 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 40px 100px 40px; }
+  .wrapper .header {
+    grid-column: span 12; }
+  .wrapper .menu {
+    grid-column: span 4; }
+  .wrapper .content {
+    grid-column: span 8; }
+  .wrapper .footer {
+    grid-column: span 12; }
+  @media (max-width: 480px) {
+    .wrapper .header {
+      grid-column: span 6; }
+    .wrapper .menu {
+      grid-row: 1;
+      grid-column: span 6; }
+    .wrapper .content {
+      grid-column: span 12; } }
