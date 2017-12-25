@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Position items</title>
+    <style>
+        /* Basic style */
+
+        .container>div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            color: #fff;
+        }
+
+        html,
+        body {
+            background-color: #f6f6f6;
+            margin: 10px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 50px 200px 50px;
+            grid-gap: 3px; 
+        }
+        .header, .footer {
+            background-color: #96ceb4;
+            grid-column-start: 1;
+            /* -1 is last column*/
+            grid-column-end: -1; 
+            
+            /* shorthand */
+            /* grid-column: 1 / -1;  or 1 / span 3 (in this case)*/
+        }
+
+        .menu{
+            background-color: #ff6f69;
+        }
+
+        .content {
+            background-color: #ffcc5c;
+        }
+
+    </style>
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="header">HEADER</div>
+        <div class="menu">MENU 1</div>
+        <div class="content">CONTENT</div>
+        <div class="menu">MENU 2</div>
+        <div class="footer">FOOTER</div>
+    </div>
+</body>
+
+</html>
